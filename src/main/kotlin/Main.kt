@@ -1,7 +1,6 @@
 
 
 fun main() {
-    //val post2:Post
     val wallService = WallService()
     var post=Post(content = "asddsdasd", likes=Likes(count=20))
     var post1=Post(content = "asddsdasd", likes=Likes(count=20))

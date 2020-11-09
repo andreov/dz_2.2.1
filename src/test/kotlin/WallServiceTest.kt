@@ -25,4 +25,15 @@ class WallServiceTest {
         val result = service.update(post)
         assertTrue(result)
     }
+
+    @Test
+    fun update2() {
+        val service = WallService()
+        var post=Post(content = "asddsdasd", likes=Likes(count=20))
+        service.add(post)
+        service.add(post)
+        val update = Post(id = 5, content = "asddsdasd", likes=Likes(count=30))
+        val result = service.update(update)
+        assertFalse(result)
+    }
 }

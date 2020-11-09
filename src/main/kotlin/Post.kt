@@ -21,7 +21,4 @@ data class Post(
         val markedAsAds: Boolean = false,
         val isFavorite: Boolean = false,
         val postponedId: Long = 0
-) { //var id: Long = 0
-    //var datePost: Int = 0
-
-}
+)
