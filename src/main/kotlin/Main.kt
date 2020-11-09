@@ -2,19 +2,15 @@
 
 fun main() {
     val wallService = WallService()
-    var post=Post(content = "asddsdasd", likes=Likes(count=20))
-    var post1=Post(content = "asddsdasd", likes=Likes(count=20))
-    var post2=Post(content = "asddsdasd", likes=Likes(count=20))
+    val audioAttachment1 = AudioAttachment()
+    val audioAttachment2 = AudioAttachment()
+    var post=Post(content = "asddsdasd", likes=Likes(count=10),comments = null)
+    var post1=Post(content = "asddsdasd", likes=Likes(count=20), comments = null)
+    var post2=Post(content = "asddsdasd", likes=Likes(count=30),comments = null,attachments= arrayOf(audioAttachment1,audioAttachment2) )
     wallService.add(post)
     wallService.add(post1)
     wallService.add(post2)
-    println(wallService.update(post1))
-    println(post.likes)
-    println(post.reports)
-    println(post.content)
-    println(post2.id)
     println(wallService.posts.last())
-    println(wallService.posts.size)
     println(wallService.posts.contentToString())
 
 
