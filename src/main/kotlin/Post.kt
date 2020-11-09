@@ -1,5 +1,5 @@
 data class Post(
-        val id: Long = 0,
+        var id: Long = 0,
         val idOnwer: Long = 0,
         val idAuthor: Long = 0,
         val createdBy: Long = 0,
@@ -21,5 +21,7 @@ data class Post(
         val markedAsAds: Boolean = false,
         val isFavorite: Boolean = false,
         val postponedId: Long = 0
-) {
+) { //var id: Long = 0
+    //var datePost: Int = 0
+
 }
