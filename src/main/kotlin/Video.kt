@@ -1,4 +1,4 @@
-data class Audio (
+data class Video (
     val id: Int,
     val album_id:Int,
     val owner_id:Int,

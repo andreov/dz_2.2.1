@@ -1,6 +1,6 @@
 class AudioAttachment : Attachment {
     override val type: String
-        get() = "Audio"
+        get() = "audio"
     override val typeMedia: Audio
-        get() = Audio(1, 1, 1, 1)
+        get() = Audio(1, 1, 1, 1,"oooo.mp3","lllll","hhhhhhh")
 }
