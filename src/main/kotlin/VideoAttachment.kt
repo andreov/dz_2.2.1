@@ -1,6 +1,5 @@
 class VideoAttachment : Attachment {
-    override val type: String
-        get() = "video"
-    override val typeMedia: Video
-        get() = Video(1, 1, 1, 1,"oooo.mp3","lllll","hhhhhhh")
+    override val type: String = "video"
+    val video: Video= Video(1, 1, 1, 1,"oooo.mp3","lllll","hhhhhhh")
+
 }
