@@ -21,6 +21,8 @@ data class Post(
         val markedAsAds: Boolean = false,
         val isFavorite: Boolean = false,
         val postponedId: Long = 0,
+        var commentsWrite: Array <CommentWrite> = emptyArray<CommentWrite>(),
         var attachments: Array<Attachment> = emptyArray<Attachment>()
+
 
 )
