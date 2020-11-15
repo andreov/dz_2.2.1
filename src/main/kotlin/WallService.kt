@@ -1,21 +1,19 @@
-import java.util.*
-
-class WallService : CreateComment {
+class WallService {
     var posts = emptyArray<Post>()
-    var commentWrite: CommentWrite = CommentWrite()
+    private var comments = emptyArray<Comment>()
 
-    override fun newComment(postId: Long, onwerId: Long, message: String): CommentWrite {
-        if (findById(postId) !== null) {
-            val index = postId.toInt() - 1
+
+    fun newComment(comment: Comment) {
+        if (findById(comment.postId) !== null) {
+            val index = comment.postId.toInt() - 1
             val post: Post = posts[index]
-            var idCom:Int = commentWrite.idComment +1
-            commentWrite =
-                CommentWrite(idCom, commentWrite.fromId, commentWrite.date, commentWrite.text)
-            post.commentsWrite += commentWrite
-            posts[index] = post.copy(commentsWrite = post.commentsWrite)
-            return commentWrite
+            val idLastComment: Int = if (post.comments.size == 0) comment.idComment else post.comments.lastIndex + 1
+            comment.idComment = idLastComment+1
+            comments += comment
+            posts[index] = post.copy(comments = comments)
         } else {
-            return throw error("Post not found")
+            val id: Long = comment.postId
+            throw PostNotFoundException(message = "no post with id $id")
         }
     }
 

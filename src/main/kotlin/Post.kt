@@ -8,7 +8,7 @@ data class Post(
         val idReplyOnwer: Long = 0,
         val idReplyPost: Long = 0,
         val frindsOnly: Boolean = false,
-        val comments: Comments?,
+        //val comments: Comments?,
         val copyright: String = "",
         val likes: Likes = Likes(),
         val reports: Reports = Reports(),
@@ -21,7 +21,7 @@ data class Post(
         val markedAsAds: Boolean = false,
         val isFavorite: Boolean = false,
         val postponedId: Long = 0,
-        var commentsWrite: Array <CommentWrite> = emptyArray<CommentWrite>(),
+        var comments:Array<Comment> = emptyArray<Comment>(),
         var attachments: Array<Attachment> = emptyArray<Attachment>()
 
 
